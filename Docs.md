@@ -23,7 +23,7 @@ By default there is a special keyword to access to the databases when you are co
 
 `db` keyword is the representation to the actual connected databases.
 
-When you use the special keyword `use` it will select the database with that name or create one for you
+When you use the special keyword `use` it will select the database with that name. We need to highlight that if you use the keyword to select a database that doesn't exist It will perform a selection, and when you add some collection the system will create the database for you.
 ```shell
 > use exampleDb
 switched to db exampleDb
@@ -35,7 +35,7 @@ exampleDb
 
 First we need to remember that in mongodb shell any valid javascript code is also valid mongodb code.
 
-Create a variable with the document that We need to insert to the collection.
+Create a variable with the document that we need to insert to the collection.
 ```shell
 > var sampleDocument = {"keyvalue" : "keycontent"};
 ```
@@ -44,7 +44,7 @@ Then we call to our special `db` keyword to insert the `sampleDocument` variable
 > db.sampleCollection.insert(sampleDocument);
 WriteResult({ "nInserted" : 1 })
 ```
-If the collection does not exist it will create it for you. The same happens with documents.
+If the collection does not exist it will create it for you. The same happens with the database.
 
 ## How to see documents in a collection
 
