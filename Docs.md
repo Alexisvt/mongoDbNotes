@@ -1,5 +1,14 @@
 # Mis notas (MongoDB Basics Notes)
 
+## How to start the MongoDb server
+
+```Shell
+C:\mongodb\bin\mongod.exe --dbpath c:\mongoData --rest --httpinterface
+```
+The `--rest` keyword active the http interface
+
+More documentation [here](http://docs.mongodb.org/ecosystem/tools/http-interfaces/#http-console)
+
 ## How to start the databases after installation
 
 Copy the rute to the bin folder where you install MongoDB and go there using the console and there type:
@@ -60,9 +69,17 @@ The `pretty` keyword is used to get a better look for JSON expression.
 ## How to see one document in a collection
 
 ```shell
-> db.sampleCollection.findOne()
-function (){
-    this._prettyShell = true;
-    return this;
-}
+> db.sampleCollection.findOne();
+```
+
+## How to connect without connecting to database
+
+```shell
+> mongo --nodb
+```
+If later I want to connect:
+
+```shell
+> var conn = new Mongo("localhost:27017");
+> db = conn.getDB("test");
 ```
