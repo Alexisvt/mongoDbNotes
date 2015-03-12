@@ -83,3 +83,10 @@ If later I want to connect:
 > var conn = new Mongo("localhost:27017");
 > db = conn.getDB("test");
 ```
+
+## How to delete a complete collection
+
+```shell
+db.sampleCollection.remove()
+```
+Where `sampleCollection` is our collection and `remove` our function that will delete
