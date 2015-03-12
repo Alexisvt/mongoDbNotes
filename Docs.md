@@ -84,9 +84,11 @@ If later I want to connect:
 > db = conn.getDB("test");
 ```
 
-## How to delete a complete collection
+## How to delete a entire collection
 
 ```shell
-db.sampleCollection.remove()
+db.sampleCollection.drop()
 ```
-Where `sampleCollection` is our collection and `remove` our function that will delete
+Where `sampleCollection` is our collection and `drop` our function that will delete all documents in the collection
+
+There is other method to delete collections and the function names is `remove()`, but it takes a parameters to find and delete according to the parameters
