@@ -1,14 +1,15 @@
 # Mis notas (MongoDB Basics Notes)
 
-## How to add `mongo` command if windows doesn't recognize it
+## How to add `mongo` and `mongod` commands if windows doesn't recognize it
 
 Go to Windows environments and add to `PATH` the location of the `mongod.exe` in this case will be: **C:\mongodb\bin**
 
 ## How to start the MongoDb server
 
 ```Shell
-C:\mongodb\bin\mongod.exe --dbpath c:\mongoData --rest --httpinterface
+mongod --dbpath c:\mongoData --rest --httpinterface
 ```
+
 The `--rest` keyword active the http interface
 
 More documentation [here](http://docs.mongodb.org/ecosystem/tools/http-interfaces/#http-console)
