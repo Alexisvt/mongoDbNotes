@@ -19,7 +19,7 @@ More documentation [here](http://docs.mongodb.org/ecosystem/tools/http-interface
 Copy the rute to the bin folder where you install MongoDB and go there using the console and there type:
 
 ```shell
-> mongo
+mongo
 ```
 
 It will default connect to the test databases.
@@ -68,14 +68,16 @@ WriteResult({ "nInserted" : 1 })
 
 If the collection does not exist it will create it for you. The same happens with the database.
 
-## How to see documents in a collection
+## How to show all the collections in the DB
+
+```cmd
+> show collections
+```
+
+## How to see documents all data in one collection
 
 ```shell
-> db.sampleCollection.find().pretty
-function (){
-    this._prettyShell = true;
-    return this;
-}
+> db.nameofyourcollection.find().pretty()
 ```
 
 The `pretty` keyword is used to get a better look for JSON expression.
@@ -102,9 +104,17 @@ If later I want to connect:
 ## How to delete a entire collection
 
 ```shell
-db.sampleCollection.drop()
+> db.sampleCollection.drop()
 ```
 
 Where `sampleCollection` is our collection and `drop` our function that will delete all documents in the collection
 
 There is other method to delete collections and the function names is `remove()`, but it takes a parameters to find and delete according to the parameters
+
+## How to show all the DBs in mongodb
+
+```cmd
+> show dbs
+```
+
+**Note**: make sure that your in the `mongo` cli to be there run `mongo`
