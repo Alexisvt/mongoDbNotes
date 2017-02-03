@@ -17,9 +17,11 @@ More documentation [here](http://docs.mongodb.org/ecosystem/tools/http-interface
 ## How to start the databases after installation
 
 Copy the rute to the bin folder where you install MongoDB and go there using the console and there type:
+
 ```shell
 > mongo
 ```
+
 It will default connect to the test databases.
 
 ## How to enter to the simple http interface
@@ -27,6 +29,7 @@ It will default connect to the test databases.
 In mongodb you have a simple http interface where you can see  usefull administrative information about the server and the operation on all the server.
 
 We can access with our browser using the ip address of our server in most cases will be localhost and the port number of the server plus 1000:
+
 ```html
 http://localhost:28017
 ```
@@ -38,6 +41,7 @@ By default there is a special keyword to access to the databases when you are co
 `db` keyword is the representation to the actual connected databases.
 
 When you use the special keyword `use` it will select the database with that name. We need to highlight that if you use the keyword to select a database that doesn't exist It will perform a selection, and when you add some collection the system will create the database for you.
+
 ```shell
 > use exampleDb
 switched to db exampleDb
@@ -50,14 +54,18 @@ exampleDb
 First we need to remember that in mongodb shell any valid javascript code is also valid mongodb code.
 
 Create a variable with the document that we need to insert to the collection.
+
 ```shell
 > var sampleDocument = {"keyvalue" : "keycontent"};
 ```
+
 Then we call to our special `db` keyword to insert the `sampleDocument` variable in the collection named *sampleCollection*.
+
 ```shell
 > db.sampleCollection.insert(sampleDocument);
 WriteResult({ "nInserted" : 1 })
 ```
+
 If the collection does not exist it will create it for you. The same happens with the database.
 
 ## How to see documents in a collection
@@ -69,6 +77,7 @@ function (){
     return this;
 }
 ```
+
 The `pretty` keyword is used to get a better look for JSON expression.
 
 ## How to see one document in a collection
@@ -82,6 +91,7 @@ The `pretty` keyword is used to get a better look for JSON expression.
 ```shell
 > mongo --nodb
 ```
+
 If later I want to connect:
 
 ```shell
@@ -94,6 +104,7 @@ If later I want to connect:
 ```shell
 db.sampleCollection.drop()
 ```
+
 Where `sampleCollection` is our collection and `drop` our function that will delete all documents in the collection
 
 There is other method to delete collections and the function names is `remove()`, but it takes a parameters to find and delete according to the parameters
