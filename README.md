@@ -2,7 +2,7 @@
 
 ## How to add `mongo` and `mongod` commands if windows doesn't recognize it
 
-Go to Windows environments and add to `PATH` the location of the `mongod.exe` in this case will be: **C:\mongodb\bin**
+Go to Windows environments and add to `PATH` the location of the `mongod.exe` in this case will be: `c:\mongodb\bin` then go to `c:\` drive and create an empty folder with the name of *mongoData*.
 
 ## How to start the MongoDb server
 
