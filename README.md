@@ -14,6 +14,20 @@ The `--rest` keyword active the http interface
 
 More documentation [here](http://docs.mongodb.org/ecosystem/tools/http-interfaces/#http-console)
 
+## How to install MongoDB as a Windows service
+
+By running the following command, where we specify explicitly where to place the logs, we will install MongoDB as a Windows Service. Make sure to run the command prompt with administrator rights.
+
+In order to install MongoDB on Windows as a service, keeping the previously used settings is as simple as adding the --install parameter and the location of the log specified by the value of --logpath.
+
+```shell
+mongod --dbpath c:\mongoData --logpath c:\mongoData\log\log.log --install --rest --httpinterface
+```
+
+If the installation is successful, you will see *MongoDB* in the Windows Services panel.
+
+**Note**: We need to start the service manually after the first installation.
+
 ## How to start the databases after installation
 
 Copy the rute to the bin folder where you install MongoDB and go there using the console and there type:
